@@ -81,15 +81,18 @@ $products = $stmt->fetchAll();
         <form action="add_to_cart.php" method="POST" id="shopForm">
             <?php foreach ($products as $product): ?>
             <div class="product-card">
+                <img src="images/<?php echo strtolower($product['name']); ?>.jpg" 
+                    alt="<?php echo $product['name']; ?>"
+                    style="width:60px; height:60px; object-fit:cover; border-radius:10px; margin-right:15px;">
                 <div class="product-info">
                     <div class="product-name"><?php echo $product['name']; ?></div>
                     <div class="product-price">$<?php echo $product['price']; ?></div>
                 </div>
                 <input type="number" 
-                       name="quantities[<?php echo $product['id']; ?>]" 
-                       class="qty-input" 
-                       value="0" 
-                       min="0">
+                    name="quantities[<?php echo $product['id']; ?>]" 
+                    class="qty-input" 
+                    value="0" 
+                    min="0">
             </div>
             <?php endforeach; ?>
 
