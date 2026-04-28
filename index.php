@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'bd.php';
-
+#comment
 $stmt = $pdo->query("SELECT * FROM products");
 $products = $stmt->fetchAll();
 #comment
