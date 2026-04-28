@@ -4,6 +4,7 @@ include 'bd.php';
 
 $stmt = $pdo->query("SELECT * FROM products");
 $products = $stmt->fetchAll();
+#stores all the results in $product
 ?>
 
 <!DOCTYPE html>
